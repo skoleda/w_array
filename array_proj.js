@@ -37,19 +37,23 @@ mas001.splice(-2,2);
     mas2.shift()
 
 //ещё способы удалить элемент(fish)
-mas3.forEach((mass,index)=>{
-    if (mas3[index]=='fish')
+let ara=mas3.forEach((mass,index)=>{
+    if (mas3[index]=='fish'){
             mas3.splice(index,1);
+            }
 })
 //---------//
 let index1=mas4.indexOf('fish',0);
 mas4.splice(index1,1);
 //----//
-mas5.map((mass,index2)=>{   
-    if (mas5[index2]=='fish')         
-        mas5.splice(index2,1); 
+let array = mas5.map((el ,index) => {   
+    if (el=='fish') {
+        mas5.splice(index,1); 
+        return el;
+    }
+    return el; 
 })
-
+array.length=array.length-1;
 
 
 console.log(1,mas);
@@ -61,3 +65,4 @@ console.log(6,mas2);
 console.log(7,mas3);
 console.log(8,mas4);
 console.log(9,mas5);
+console.log(10,array);
